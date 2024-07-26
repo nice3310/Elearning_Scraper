@@ -9,6 +9,12 @@
       100% { transform: translateX(0); }
     }
 
+    @keyframes button-pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
     body {
       width: 300px;
       height: 400px;
@@ -34,6 +40,12 @@
 
     #start-button:hover {
       background-color: #c7afaf;
+    }
+
+    #start-button.scraping {
+      background-color: #c7afaf;
+      animation: button-pulse 1s infinite;
+      cursor: not-allowed;
     }
 
     #log-area {

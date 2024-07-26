@@ -336,7 +336,7 @@ function downloadFileForce(url, cookies, folderName, fileName, zip) {
         return response.blob().then(blob => ({ blob, fileExtension }));
     })
     .then(({ blob, fileExtension }) => {
-        const filePath = `${folderName}/${cleanFolderName(fileName)}${fileExtension}`;
+        const filePath = `${folderName}/${cleanFolderName(fileName)}`;
         logMessage(`Saving file to: ${filePath}`);
         zip.file(filePath, blob);
     })
