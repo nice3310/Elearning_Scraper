@@ -15,7 +15,7 @@
 
 ## 使用方法-2
 
-1. 克隆此專案：
+1. clone 此專案：
     ```sh
     git clone https://github.com/nice3310/Elearning_Scraper.git
     ```
