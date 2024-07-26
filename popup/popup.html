@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Moodle Scraper</title>
+  <style>
+    @keyframes crawl {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(50px); }
+      100% { transform: translateX(0); }
+    }
+
+    body {
+      width: 300px;
+      height: 400px;
+      font-family: Arial, sans-serif;
+      background-color: #2f2b2b;
+      color: #fff;
+      padding: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #start-button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 20px;
+      background-color: #141414;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #start-button:hover {
+      background-color: #c7afaf;
+    }
+
+    #log-area {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #444;
+      border: 1px solid #555;
+      border-radius: 5px;
+      height: 300px;
+      overflow-y: auto;
+      font-size: 12px;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      color: #ddd;
+    }
+
+    #crawler {
+      width: 20px;
+      height: 20px;
+      background-color: #ff0;
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      border-radius: 50%;
+      animation: crawl 2s infinite;
+      animation-play-state: paused; /* Initial state: paused */
+    }
+  </style>
+</head>
+<body>
+  <div id="crawler"></div>
+  <button id="start-button">Start Scraping</button>
+  <div id="log-area"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
